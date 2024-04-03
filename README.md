@@ -1,3 +1,3 @@
-![Alt text](TidyMet.png?raw=true =100x)
+<img src="TidyMet.png" width="200">
 # TidyMet
 Metabolomics Data Sharing Protocol
