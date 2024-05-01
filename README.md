@@ -7,13 +7,21 @@ For metabolomics, the starting point for any statistical or machine learning ana
 <br />
 <br />
 A simple way to organise this data is as three linked tables (*DataTable*, *PeakTable*, *MetaTable*), with two sets of ‘keys’ (a *key* is a unique identifier for an entity in the table). One set of keys links the metabolite features to chemical annotations and the other set links samples to sample meta data.
+<br />
+<br />
 ![Three table format](res/ThreeTables.png)
 This configuration works reasonably well, but does require the unnecessary overhead of on-the-fly mapping between *DataTable* to the *MetaTable* which is prone to user error. It is much simpler if these two tables are concatenated.
+<br />
+<br />
 ![Two table format](res/TwoTables.png)
 Now there is only one set of *keys* uniquely identifying each feature. All statistical/ML modelling can be performed using a single *DataTable* and mapped to the *PeakTable* for post-hoc tabulation of results (e.g. feature p-values) and annotating plots. Using a single *DataTable* also makes it much simpler to slice the data into sub-tables for sub-analysis (e.g. pairwise comparison of sub-populations).
 # Tidy Data
 When formatting a table that is required to interact with a  computer programming environment (RStudio, Jupyter Notebooks, Matlab) it is best practice to follow the conventions for tidy data set out by [Wickham 2014](https://www.jstatsoft.org/article/view/v059i10).
-![Hadley Wickham](res/Wickham.png)
+<br />
+<br />
+<img src="res/Wickham.png" width="600" style="float:left">
+<br />
+<br />
 This requires data tables adhere to the following rules:
 1. Every column is a variable.
 2. Every row is an observation
