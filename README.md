@@ -1,4 +1,4 @@
-<img src="images/TidyMet.png" width="200" style="float:left">
+<img src="res/TidyMet.png" width="200" style="float:left">
 
 # Metabolomics Data Sharing Protocol
 
@@ -10,7 +10,7 @@ A simple way to organise this data is as three linked tables (*DataTable*, *Peak
 ![Three table format](res/ThreeTables.png)
 This configuration works reasonably well, but does require the unnecessary overhead of on-the-fly mapping between *DataTable* to the *MetaTable* which is prone to user error. It is much simpler if these two tables are concatenated.
 ![Two table format](res/TwoTables.png)
-Now there is only one set of *keys* uniquely identifying each feature. All statistical/ML modelling can be performed using a single *DataTable* and mapped to the *PeakTable* for post-hoc tabulation of results (e.g. feature p-values) and visualisation. Using a single *DataTable* also makes it much simpler to slice the data into sub-tables for sub-analysis (e.g. pairwise comparison of sub-populations).
+Now there is only one set of *keys* uniquely identifying each feature. All statistical/ML modelling can be performed using a single *DataTable* and mapped to the *PeakTable* for post-hoc tabulation of results (e.g. feature p-values) and annotating plots. Using a single *DataTable* also makes it much simpler to slice the data into sub-tables for sub-analysis (e.g. pairwise comparison of sub-populations).
 # Tidy Data
 When formatting a table that is required to interact with a  computer programming environment (RStudio, Jupyter Notebooks, Matlab) it is best practice to follow the conventions for tidy data set out by [Wickham 2014](https://www.jstatsoft.org/article/view/v059i10).
 ![Hadley Wickham](res/Wickham.png)
