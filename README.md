@@ -26,12 +26,11 @@ This requires data tables adhere to the following rules:
 1. Every column is a variable.
 2. Every row is an observation
 3. Every cell is a single value.
-![Tidy Rules](res/TidyRules.png)
+
+![Tidy Rules](res/Tidy.png)
+
 # TidyMet
-The *TidyMet/** protocol is derived from the Wickham Tidy Data framework. Both the *DataTable* and the *PeakTable* follow the Tidy Data rules. In order to allow programmers to automate mapping between the two tables and basic visualisation the *TidyMet/** protocol enforces a minimal set of required column headers and naming conventions. The *PeakTable* must have a column named *‘UID’*, such that each cell is a unique feature identification code (e.g. Met1, Met2, Met3, ...). Also, *PeakTable* must have a column named ‘Name’, such that each cell contains a text string for naming the *UID* code. The *DataTable* must have a column named ‘SampleID’ such that each cell is a unique sample identification code. Also, there must be a set of columns in the *DataTable* labeled to match the *PeakTable* *UID* cells.
-<br />
-<br />
-Additional columns can be informally defined by the user or formally as sub protocols (see *TidyMet<sub>qc</sub>\** below). One common practice is to add columns of statistical metrics to the *PeakTable*. For example, if a t-test was performed on each feature, comparing two sample populations, the resulting p-value for each comparison could be added into a column labeled *pVal*
+The *TidyMet\** protocol is derived from the Wickham Tidy Data framework. Both the *DataTable* and the *PeakTable* follow the Tidy Data rules. In order to allow programmers to automate mapping between the two tables and basic visualisation the *TidyMet/** protocol enforces a minimal set of required column headers and naming conventions. The *PeakTable* must have a column labelled **UID**, such that each cell is has unique feature identification code (e.g. *Met1, Met2, Met3,* ...). Also, *PeakTable* must have a column labelled **Name**, such that each cell contains a text string for naming the *UID* code. The *DataTable* must have a column labelled **SampleID** such that each cell has a unique sample identification code. Also, there must be a set of columns in the *DataTable* labeled to match the *PeakTable* *UID* cells (e.g. **Met1**, **Met2**, **Met3**, ...). Additional columns can be labelled informally by the user or defined formally as sub protocols (see *TidyMet<sub>qc</sub>\** below). One common practice is to add columns of statistical metrics to the *PeakTable*. For example, if a t-test was performed on each feature, comparing two sample populations, the resulting p-value for each comparison could be added into a column labeled *pVal*
 # Format
 There is no imposed convention for storage of the *DataTable* and *PeakTable* tables; however, they are typically stored as two sheets in an a single Excel spreadsheet or as two .csv files. There are examples [here](\examples).
 # Table Interoperability
